@@ -51,7 +51,7 @@ spec:
     spec:
       containers:
         - name: webpostgre
-          image: eliseusturaro/kube-news:v2
+          image: eliseusturaro/kube-news:{{TAG}}
           ports:
           - containerPort: 8080
           env:
