@@ -30,7 +30,6 @@ pipeline {
                 withKubeConfig([credentialsId: 'kubeconfig']){
                     sh 'sed -i "s/{{TAG}}/$tag_version/g ./k8s/deployment.yaml'
                     sh 'kubectl apply -f ./k8s/deployment.yaml'
-                    dockerapp.push("${env.BUILD_ID}")
                 }
                 
             }
